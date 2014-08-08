@@ -19,14 +19,14 @@ float:left;
 <body>
 <ul>
 <?php
-$files = glob("*.png");
+$files = glob("images/*.png");
 for ($i=1; $i<count($files); $i++)
 {
 	$num = $files[$i];
 	echo '<li>';
 	echo '<a href="'.$num.'" >';
 	echo '<img src="'.$num.'" alt="'.$num.'" />'."<br />";
-	print $num."";
+	print(substr($num,7)."");
 	echo '</a>';
 	echo '</li>';
 }
