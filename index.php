@@ -2,17 +2,20 @@
 <head>
 <style type="text/css">
 a:link, a:active, a:visited , a:hover {
-color: rgb(217, 217, 217);
-text-decoration:none;
+  color: rgb(146, 146, 146);
+  text-decoration:none;
 }
 ul{
-list-style-type: none;
+  list-style-type: none;
 }
 li{
-margin-right:20px;
-width:100px;
-height:100px;
-float:left;
+  margin-right:20px;
+  width:100px;
+  height:100px;
+  float:left;
+}
+img{
+  display:block;
 }
 </style>
 </head>
@@ -22,13 +25,13 @@ float:left;
 $files = glob("images/*.png");
 for ($i=1; $i<count($files); $i++)
 {
-	$num = $files[$i];
-	echo '<li>';
-	echo '<a href="'.$num.'" >';
-	echo '<img src="'.$num.'" alt="'.$num.'" />'."<br />";
-	print(substr($num,7)."");
-	echo '</a>';
-	echo '</li>';
+        $num = substr($files[$i],7);
+        echo '  <li>';
+        echo '<a href="'.$num.'" >';
+        echo '<img src="'.$num.'" alt="'.$num.'" />';
+        print $num."";
+        echo '</a>';
+        echo "</li>\n";
 }
 ?>
 </ul>
